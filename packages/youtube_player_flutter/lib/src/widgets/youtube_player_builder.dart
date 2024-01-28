@@ -68,11 +68,6 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
       key: playerKey,
       child: WillPopScope(
         onWillPop: () async {
-          final controller = widget.player.controller;
-          if (controller.value.isFullScreen) {
-            widget.player.controller.toggleFullScreenMode();
-            return false;
-          }
           return true;
         },
         child: widget.player,
